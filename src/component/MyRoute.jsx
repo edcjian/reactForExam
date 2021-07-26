@@ -13,6 +13,10 @@ import {range} from "../tool";
 import {Comments} from "./common/Comment";
 import {AddTeacher} from "./admin/AddTeacher";
 import {TeacherManage} from "./admin/TeacherManage";
+import {ScoreTable} from "./student/ScoreTable";
+import {AddAnswer} from "./teacher/AddAnswer";
+import {AddExam} from "./teacher/AddExam";
+import {AddStudent} from "./teacher/AddStudent";
 function Fetch(url,params){
 
     return Request.get(url,params)
@@ -38,7 +42,11 @@ export const MyRoute = ({children}) => {
         {name: "/stu",component:StudentIndex},
         {name: "/exams",component:Exam},
         {name: "/answer/:id",component:Answer},
-        {name: "/teacherManage",component:TeacherManage}
+        {name: "/teacherManage",component:TeacherManage},
+        {name: "/scoreTable",component:ScoreTable},
+        {name: "/addAnswer",component:AddAnswer},
+        {name: "/addExam",component:AddExam},
+        {name: "/addStudent",component:AddStudent}
 
    /*     {name:"/test",component:Test},
         {name:"/tree",component:Tree},
