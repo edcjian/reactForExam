@@ -1,0 +1,129 @@
+.remind {
+    border-radius: 4px;
+    padding: 10px 20px;
+    display: flex;
+    position: fixed;
+    right: 20px;
+    bottom: 50%;
+    flex-direction: column;
+    color: #606266;
+    background-color: #fff;
+    border-left: 4px solid #409eff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.container {
+    width: 500px;
+    height: 300px;
+    margin-left: 500px;
+    margin-top: 200px;
+    background: #b43c3c;
+    border:2px solid;
+    border-radius:25px;
+    display: flex;
+    align-items: center;
+}
+.exam{
+    width: 1000px;
+    height: 600px;
+    margin-left: 268px;
+    margin-top: 124px;
+    display: flex;
+    background-color: #1eb66f;
+
+}
+
+/*}
+.container .el-radio-group {
+    margin: 30px 0px;
+}
+a:link {
+    color:#ff962a;
+    text-decoration:none;
+}
+#login {
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+}
+#login .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
+    !*background: url('../../public/img/cry2.jpg')center top / cover no-repeat;*!
+    background-color: #b6bccdd1 !important;
+}
+#login .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login .main-container .top {
+    margin-top: 100px;
+    font-size: 30px;
+    color: #ff962a;
+    display: flex;
+    justify-content: center;
+}
+#login .top .icon-kaoshi {
+    font-size: 80px;
+}
+#login .top .title {
+    margin-top: 20px;
+}
+#login .bottom {
+    display:flex;
+    justify-content: center;
+    background-color:#fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#login .bottom .title {
+    text-align: center;
+    font-size: 30px;
+}
+.bottom .container .title {
+    margin: 30px 0px;;
+}
+.bottom .submit .row-login {
+    width: 100%;
+    background-color: #04468b;
+    border-color: #04468b;
+    margin: 20px 0px 10px 0px;
+    padding: 15px 20px;
+}
+.bottom .submit {
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    margin-top: 50px;
+    text-align: center;
+}
+.footer .msg1 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.footer .msg2 {
+    font-size: 14px;
+    color: #e3e3e3;
+    margin-top: 70px;
+}
+.bottom .options {
+    margin-bottom: 40px;
+    color: #ff962a;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom .options > a {
+    color: #ff962a;
+}
+.bottom .options .register span:nth-child(1) {
+    color: #8C8C8C;
+}
+.test{
+    margin:200px 1000px
+}*/
