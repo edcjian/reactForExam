@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {MyRoute, Tree} from "./component/Routers";
+import {MyRoute, Tree} from "./component/MyRoute";
 import 'antd/dist/antd.css';
 
 const data = [

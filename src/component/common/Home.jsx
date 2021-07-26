@@ -24,17 +24,17 @@ export const Home = ({history}) => {
             children: [{title: '功能介绍', key: '2-1', path: '/answerDescription'},
                 {title: '所有题库', key: '2-2', path: '/selectAnswer'},
                 {title: '增加题库', key: '2-3', path: '/addTeacher'},
-                {title: '添加', key: '2-4', path: '/addAnswerChildren'}],
+                {title: '添加', key: '2-4', path: '/addAnswer'}],
         },
         {
             key: '3',
             title: '成绩查询',
 
             children: [
-                {title: '学生成绩查询', key: '3-1', path: '/allStudentsGrade'},
-                {title: '分数', key: '3-2', path: '/grade'},
-                {title: '成绩分段查询', key: '3-3', path: '/selectExamToPart'},
-                {title: '成绩部分', key: '3-4', path: '/scorePart'}],
+                {title: '学生成绩查询', key: '3-1', path: '/addExam'},
+                {title: '分数', key: '3-2', path: '/scoreTable'},
+                {title: '成绩分段查询', key: '3-3', path: '/addStudent'},
+                {title: '成绩部分', key: '3-4', path: '/teacherManage'}],
         },
         {
             key: '4',
