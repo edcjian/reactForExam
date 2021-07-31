@@ -17,6 +17,7 @@ import {ScoreTable} from "./student/ScoreTable";
 import {AddAnswer} from "./teacher/AddAnswer";
 import {AddExam} from "./teacher/AddExam";
 import {AddStudent} from "./teacher/AddStudent";
+import {SelectExam} from "./teacher/SelectExam";
 function Fetch(url,params){
 
     return Request.get(url,params)
@@ -46,7 +47,8 @@ export const MyRoute = ({children}) => {
         {name: "/scoreTable",component:ScoreTable},
         {name: "/addAnswer",component:AddAnswer},
         {name: "/addExam",component:AddExam},
-        {name: "/addStudent",component:AddStudent}
+        {name: "/addStudent",component:AddStudent},
+        {name: "/selectExam",component:SelectExam},
 
    /*     {name:"/test",component:Test},
         {name:"/tree",component:Tree},

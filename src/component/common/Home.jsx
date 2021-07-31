@@ -21,7 +21,7 @@ export const Home = ({history}) => {
             key: '2',
             title: '题库管理',
 
-            children: [{title: '功能介绍', key: '2-1', path: '/answerDescription'},
+            children: [{title: '功能介绍', key: '2-1', path: '/selectExam'},
                 {title: '所有题库', key: '2-2', path: '/selectAnswer'},
                 {title: '增加题库', key: '2-3', path: '/addTeacher'},
                 {title: '添加', key: '2-4', path: '/addAnswer'}],
