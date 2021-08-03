@@ -56,12 +56,12 @@ export function Problem({problem, match}) {
             <div>{state.problem.title}</div>
             <div>{state.problem.topic}</div>
             <div className="action">
-                <div>{}</div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>关注问题</div>
+                <div>写回答</div>
+                <div>邀请回答</div>
+                <div>好问题</div>
+                <div>添加评论</div>
+                <div>分享</div>
             </div>
         </div>
         <div className="content">

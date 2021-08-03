@@ -9,7 +9,9 @@
     height: 200px;
     background: #48c12e;
     .action{
-      flex-direction: row;
+      display: flex;
+      flex-direction:row;
+      justify-content: space-around;
       .item{
         width: 100px;
       }

@@ -13,14 +13,14 @@ export function Content({id, name, intro, text, anumber, problemId: {title}, com
 
     return <div className="content">
         <div className="title">
-            <img src={se} alt=""/>
+            {/*<img src={se} alt=""/>*/}
             <div className="ta">
                 {name}
                 {intro}
             </div>
         </div>
 
-        <div className="introduction">
+        <div className="article">
             <Link to={"/problem/"+1}> {title} </Link>
             <div>{text}</div>
             <Link to='/detail'>阅读全文</Link>
