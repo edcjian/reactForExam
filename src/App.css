@@ -2,7 +2,18 @@
 .App {
   text-align: center;
 }
+.cont {
+  display: flex;
+  flex-direction: column;
 
+
+}
+.options {
+  background: #000;
+  width: 700px;
+  height: 228px;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

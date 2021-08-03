@@ -1,0 +1,64 @@
+.con{
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+
+  .center {
+    width: 1000px;
+
+    .left {
+      .header {
+        .options {
+          width: 80px;
+        }
+
+        background: #e5efff;
+        width: 300px;
+        height: 50px;
+        display: flex;
+      }
+
+      .cont {
+        display: flex;
+        flex-direction: column;
+
+        .options {
+          background: #000;
+          width: 700px;
+          height: 228px;
+
+        }
+      }
+    }
+    .right{
+
+    }
+  }
+}
+.content{
+  width: 700px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  .title{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 50px;
+    .ta{
+      display: flex;
+    }
+  }
+  .action{
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+
+    .icon{
+      display: flex;
+      width: 70px;
+      height: 30px;
+    }
+  }
+}

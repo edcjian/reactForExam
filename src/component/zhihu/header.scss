@@ -1,0 +1,10 @@
+.myHeader{
+  display: flex;
+  width: 1200px;
+  height: 50px;
+  justify-content: space-around;
+  .sub{
+    width: 50px;
+    //background: #000;
+  }
+}

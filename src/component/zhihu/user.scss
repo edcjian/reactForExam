@@ -1,0 +1,15 @@
+.header{
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  .avatar{
+    width: 160px;
+    height: 160px;
+    background: #fafafa;
+  }
+  .intro{
+    height: 170px;
+    width: 170px;
+  }
+}

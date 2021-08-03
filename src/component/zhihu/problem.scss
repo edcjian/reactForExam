@@ -1,0 +1,18 @@
+.details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .header{
+
+    flex-direction: column;
+    width: 1000px;
+    height: 200px;
+    background: #48c12e;
+    .action{
+      flex-direction: row;
+      .item{
+        width: 100px;
+      }
+    }
+  }
+}
