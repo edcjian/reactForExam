@@ -15,8 +15,8 @@ export const MyForm =({formData,finish})=>{
 
     return     <Form {...layout} form={form} name="control-hooks" onFinish={finish}>
         {formData.map((it,index)=>
-            <Form.Item name={it.name} label={it.name} rules={[{ required: true }]}>
-                <Input />
+            <Form.Item key={index} name={it[0]} label={it[0]} rules={[{ required: true }]}>
+                <Input  placeholder={it[1]} />
             </Form.Item>)
 
         }

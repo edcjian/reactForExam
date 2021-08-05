@@ -4,7 +4,7 @@ import '../sty.scss'
 import {Button, Form, Menu, Tree} from "antd";
 import Sider from "antd/es/layout/Sider";
 import "draft-js/dist/Draft.css";
-import {useHistory} from "react-router-dom";
+
 const {SubMenu} = Menu;
 export const Home = ({history}) => {
 

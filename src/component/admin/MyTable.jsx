@@ -3,16 +3,14 @@ import {useReactive, useRequest} from "ahooks";
 import request from "../request";
 import Modal from "antd/es/modal/Modal";
 import {EditableProTable} from "@ant-design/pro-table";
-import {useEffect, useState} from "react";
-
-
 export const MyTable = ({link,column, isEditable=false}) => {
     const [form] = Form.useForm();
 
     const edits = (text, record, _, action) => {
 
         console.log(record.id)
-        action?.startEditable?.(record.id);//todo
+
+        // action?.startEditable?.(record.id);//todo
     }
     const del = async (text, record, _, action) => {
         try {

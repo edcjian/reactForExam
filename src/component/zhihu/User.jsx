@@ -2,7 +2,7 @@ import React from 'react';
 import './user.scss'
 import {Link} from "react-router-dom";
 import {useReactive, useRequest} from "ahooks";
-import {Content} from "./Content";
+import {Answer} from "./Answer";
 import {Tabs} from "antd";
 import request from "../request";
 
@@ -40,7 +40,7 @@ export const User = () => {
                 </TabPane>
             </Tabs>
             {data?.map(it =>
-                <Content {...it}/>
+                <Answer {...it}/>
             )}
         </div>
     </div>

@@ -1,17 +1,19 @@
 import {useReactive} from "ahooks";
 import request from "../request";
 import {message, Tag} from "antd";
-import {useEffect} from "react";
-import {Content} from "./Content";
+import {createContext, useEffect} from "react";
+import {Answer} from "./Answer";
 import {Banner} from "./Banner";
 import './problem.scss'
-
+export const myContext=createContext(0)
+const { Provider }=myContext
 export function Problem({problem, match}) {
     let state = useReactive({
             answer: [],
             problem: '',
             hasMore: false,
             loading: false,
+        count:1678
 
         }
     )
@@ -21,11 +23,10 @@ export function Problem({problem, match}) {
         async function fetchData() {
             try {
                 const res = await request.get('/problem?id=eq.' + id)
-
                 state.problem = res[0]
-
-                const ans = await request.get(`/answer?problemId=eq.${res?.[0]?.id}`)
-
+                const ans = await request.get(
+                    `answer?select=id,comment!answerId(id,parentId,text,userId(name,intro)),content,anumber,problemId(title,id),userId(name,intro)`)
+               console.log(ans)
                 state.answer = ans
             } catch (e) {
                 console.log(e)
@@ -46,7 +47,7 @@ export function Problem({problem, match}) {
 
     }
     return <div className="details">
-        <Banner/>
+
         <div className="header">
             <div>
                 {state.problem.tag?.split(',')?.map(it=>
@@ -66,11 +67,15 @@ export function Problem({problem, match}) {
         </div>
         <div className="content">
             {
-                state.answer.map(it =>
-                    <Content {...it}/>
+                state.answer.map((it,index) =>
+                    <Provider value={it.comment} >
+                    <Answer {...it} key={index}/>
+                    </Provider>
                 )
             }
         </div>
 
     </div>
+
 }
+

@@ -1,47 +1,73 @@
-import React, {useEffect} from 'react';
+import React, {createContext, useEffect} from 'react';
 import './zhihu.scss'
-
 import {Input, Tabs} from "antd";
-
 import {useReactive} from "ahooks";
 import request from "../request";
-import '../student/detail.scss'
-import {Content} from "./Content";
+import {Answer} from "./Answer";
 import {Banner} from "./Banner";
-
-
-
-
-
-
+import {Page} from "./Page";
+import {Hot} from "./Hot";
+import {MyInfo} from "./MyInfo";
+const {TabPane} = Tabs;
 
 export const Zhihu = () => {
     let onSearch = () => {
 
     }
+const state=useReactive({
+    problems:[],
+    answer:[],
+    proId:[],
+    count:123
+})
     useEffect(() => {
         async function fetchData() {
-            const res = await request.get("v4/questions/476259609");
-            console.log(res)
-        }
+            try {
+                const ans = await request.get(
+                    `/answer?select=id,anumber,problemId(title,id),userId(name,intro)`)
+                state.answer=ans
 
+console.log()
+            }
+            catch (e){
+                console.log(e)
+            }
+        }
         fetchData()
     }, []);
-    const problems = useReactive([])
-    return <div className="con">
 
+
+    return <div className="con">
+<Banner/>
         <div className="center">
             <div className="left">
-                <div className="header">
-                    <div className="options">关注</div>
-                    <div className="options">推荐</div>
-                    <div className="options">热榜</div>
-                    <div className="options">视频</div>
-                </div>
-                <Content id={2030714648} problem={problems}>
+                <Tabs defaultActiveKey="1" >
+                    <TabPane tab="关注" key="1">
+                        {
+                            state.answer.map((it,index) =>
+                                    <Answer {...it} key={index}/>
+                            )
+                        }
+                    </TabPane>
+                    <TabPane tab="推荐" key="2">
+                        {
+                            state.answer.map((it,index) =>
+                                <Answer {...it} key={index}/>
+                            )
+                        }
+                    </TabPane>
+                    <TabPane tab="热榜" key="3">
+                        <Hot/>
+                    </TabPane>
+                    <TabPane tab="视频" key="3">
+                        Content of Tab Pane 3
+                    </TabPane>
+                </Tabs>
 
-                </Content>
             </div>
+            <MyInfo/>
         </div>
+
     </div>
+
 }

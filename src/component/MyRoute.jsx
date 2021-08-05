@@ -6,7 +6,7 @@ import "./my.css"
 
 import {StudentIndex} from "./student";
 import {Login} from "./common/Login";
-import {Answer, Exam, ExamDetail} from "./student/Exam";
+import {Exam, ExamDetail} from "./student/Exam";
 
 import {AddTeacher} from "./admin/AddTeacher";
 import {TeacherManage} from "./admin/TeacherManage";
@@ -18,11 +18,11 @@ import {SelectExam} from "./teacher/SelectExam";
 import { Zhihu} from "./zhihu/Zhihu";
 import {Problem} from "./zhihu/Problem";
 import {User} from "./zhihu/User";
+import {Answer} from "./zhihu/Answer";
+import {useRequest} from "ahooks";
+import request from "./request";
+import {Banner} from "./zhihu/Banner";
 
-function Fetch(url, params) {
-
-    return Request.get(url, params)
-}
 
 
 /*export function Tree({items,depth=0}) {
@@ -44,14 +44,15 @@ export const MyRoute = ({children}) => {
         {name: "/login", component: Login},
         {name: "/stu", component: StudentIndex},
         {name: "/exams", component: Zhihu},
-        {name: "/answer/:id", component: Answer},
+        // {name: "/answer/:id", component: Answer},
         {name: "/teacherManage", component: TeacherManage},
-        {name: "/scoreTable", component: ScoreTable},
+
         {name: "/addAnswer", component: AddAnswer},
         {name: "/addExam", component: Zhihu},
         {name: "/addStudent", component: AddStudent},
         {name: "/problem/:id", component: Problem},
         {name: "/user", component: User},
+        {name: "/banner", component:  Banner},
 
         /*     {name:"/test",component:Test},
              {name:"/tree",component:Tree},

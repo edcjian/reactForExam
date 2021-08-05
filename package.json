@@ -60,6 +60,7 @@
     ]
   },
   "devDependencies": {
-    "@ant-design/pro-table": "^2.42.1"
+    "@ant-design/pro-table": "^2.42.1",
+    "lodash": "^4.17.21"
   }
 }
